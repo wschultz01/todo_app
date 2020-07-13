@@ -1,0 +1,62 @@
+/* :root {
+	--main-width-box: 100px;
+	--main-height-box: 100px;
+	--main-box-margin: 10px;
+	--main-box-display: inline-block;
+}
+
+.class {
+	width: var(--main-width-box);
+	height: var(--main-height-box);
+	margin: var(--main-box-margin);
+	display: var(--main-box-display);
+} */
+
+body {
+	font-family: 'Special Elite', cursive;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.submit-btn,
+.select-wrapper input.select-dropdown,
+.btn {
+	font-family: 'Special Elite', cursive;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.container {
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.project_nav {
+	margin: 0;
+}
+
+.collapsible {
+	margin-bottom: 0px;
+}
+
+#create-btn {
+	background-color: #616161;
+}
+
+.f-input-style,
+.select-wrapper input.select-dropdown {
+	color: gray;
+}
+
+/* CSS to indicate a complete task. (Cross-out text.) */
+.task-style-line {
+	text-decoration: line-through;
+}
+
+.task-style-no-line {
+	text-decoration: none;
+}

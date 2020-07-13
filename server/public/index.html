@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SQL Project Planner</title>
+        <script src="vendors/jQuery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="scripts/client.js"></script>
+        <link rel="stylesheet" href="styles/style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="nav-wrapper grey lighten-1">
+                    <a href="#" class="brand-logo center">Project Tracker</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><span class="material-icons">
+                                swap_vert
+                            </span>Add a Task</div>
+                        <div class="collapsible-body">
+                            <form class="col s12" id="add-task">
+                                <div class="row">
+                                    <div class="input-field col s3">
+                                        <input id="task_name" type="text" class="validate" required>
+                                        <label for="task_name">Task</label>
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <select id="status" name="type" required="required" class="validate">
+                                            <option value="" disabled selected>Status</option>
+                                            <option value="Not Started">Not Started</option>
+                                            <option value="In-Progress">In-Progress</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <input id="start" type="date" class="validate">
+                                        <label for="start">Start</label>
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <input id="due" type="date" class="validate">
+                                        <label for="due">Due</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button class="btn waves-effect waves-light submit-btn" id="create-btn"
+                                        type="submit" name="action" form="add-task">Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+                <table class="highlight">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Status</th>
+                            <th>Start</th>
+                            <th>Due</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="viewTasks">
+                        <!-- Container for all of the Task Rows -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer class="page-footer grey darken-3">
+            <div class="container">
+                <form id="edit-task-form">
+                    <div class="row">
+                        <div class="input-field col s3">
+                            <input class="f-input-style" id="task_name_edit" type="text" class="validate" required>
+                        </div>
+                        <div class="input-field col s2">
+                            <select id="status_edit" name="type" required="required" class="validate">
+                                <option value="" id="status-color" disabled>Status</option>
+                                <option value="Not Started" selected>Not Started</option>
+                                <option value="In-Progress">In-Progress</option>
+                            </select>
+                        </div>
+                        <div class="input-field col s3">
+                            <input id="start_edit" type="date" class="validate">
+                        </div>
+                        <div class=" input-field col s3">
+                            <input id="due_edit" type="date" class="validate">
+                        </div>
+                        <div class="input-field col s1">
+                            <button type='submit' id="save-btn" form="edit-task-form"
+                                class='btn waves-effect waves-light grey lighten-1'>Save
+                                Task</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </footer>
+    </body>
+
+</html>
